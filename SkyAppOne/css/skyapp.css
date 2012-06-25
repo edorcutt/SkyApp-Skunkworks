@@ -1,0 +1,13 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Kontact application styles
+*/
+
+#modalSpinner {
+		top: 50%;
+		left: 50%;
+		width: 100px;
+		margin: -20px 0 0 -50px;
+		background-color: rgba(30,30,30,1);
+}
