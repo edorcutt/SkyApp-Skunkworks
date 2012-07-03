@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SkyAppTwo</title>
+
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Ed Orcutt">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/skyapp.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <!-- http://mathiasbynens.be/notes/touch-icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/kynetx-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/kynetx-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/kynetx-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#!/">SkyAppTwo</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li id="navHome" class="active"><a href="#!/"><i class="icon-home icon-white"></i> Home</a></li>
+              <li id="navAbout"><a href="#!/about"><i class="icon-info-sign icon-white"></i> About</a></li>
+              <li id="navLogin"><a href="#!/login"><i class="icon-user icon-white"></i> Login</a></li>
+              <li id="navProfile" style="display:none;"><a href="#!/profile"><i class="icon-user icon-white"></i> Profile</a></li>
+              <li id="navLogout" style="display:none;"><a href="#!/logout"><i class="icon-off icon-white"></i> Logout</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+			<div id="modalSpinner" class="modal">
+				<div class="modal-body"><img src="img/spinner70.gif"></div>
+			</div>
+
+			<!-- View: Home
+			============================================ -->
+  		<section id="viewHome" class="viewPanel" style="display:block;">
+				<div class="page-header">
+					<h1>SkyAppTwo</h1>
+				</div>
+				<div class="row">
+					<div class="span6">
+						<h2>SkyApp</h2>
+						<p>Now is the time for all good people to come to the aid of their country. Now is the time for all good people to come to the aid of their country. Now is the time for all good people to come to the aid of their country.</p>
+  				</div>
+					<div class="span6">
+						<h2>Skunkworks</h2>
+						<p>Now is the time for all good people to come to the aid of their country. Now is the time for all good people to come to the aid of their country. Now is the time for all good people to come to the aid of their country.</p>
+  				</div>
+				</div>
+	   </section> <!-- #viewHome -->
+
+			<!-- View: About
+			============================================ -->
+  		<section id="viewAbout" class="viewPanel" style="display:none;">
+				<div class="page-header">
+					<h1>About SkyAppTwo</h1>
+				</div>
+				<div class="row">
+					<div class="span6">
+						<h2>SkyApp</h2>
+						<p>Now is the time for all good people to come to the aid of their country. Now is the time for all good people to come to the aid of their country. Now is the time for all good people to come to the aid of their country.</p>
+  				</div>
+					<div class="span6">
+						<h2>Skunkworks</h2>
+						<p>Now is the time for all good people to come to the aid of their country. Now is the time for all good people to come to the aid of their country. Now is the time for all good people to come to the aid of their country.</p>
+  				</div>
+				</div>
+	   </section> <!-- #viewAbout -->
+
+			<!-- View: Profile
+			============================================ -->
+  		<section id="viewProfile" class="viewPanel" style="display:none;">
+				<div class="page-header">
+					<h1>Your Profile</h1>
+				</div>
+				<div class="row">
+					<div class="span4">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li id="sideNavApps" class="nav-header">Your Applications</li>
+              <li id="sideNavChannels" class="nav-header">Your Channels</li>
+            </ul>
+          </div><!--/.well -->
+				</div>
+	   </section> <!-- #viewProfile -->
+
+			<!-- View: Login
+			============================================ -->
+  		<section id="viewLogin" class="viewPanel" style="display:none;">
+				<div class="row">
+					<div class="span6">
+
+            <form id="formLogin" class="form-horizontal">
+							<input type="hidden" id="loginAction" name="loginAction" value="">
+              <fieldset>
+								<legend>SkyAppTwo Login</legend>
+								<div id="alertLogin" class="alert alert-error" style="display:none;">
+									<a class="close" data-dismiss="alert">&times;</a>
+									Code Monkey on Fired!
+								</div>
+                <div class="control-group">
+                  <label class="control-label" for="loginEmail">Email</label>
+                  <div class="controls">
+                    <input type="text" id="loginEmail" name="loginEmail">
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="loginPassword">Password</label>
+                  <div class="controls">
+                    <input type="password" id="loginPassword" name="loginPassword">
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+              </fieldset>
+            </form>
+
+  				</div>
+					<div class="span6">
+						<legend>&nbsp;</legend>
+						<h3>New user?</h3>
+						<p><a href="#!/signup">Click here to create a new account.</a></p>
+						<!-- 
+						<h3>Forgot password?</h3>
+						<p><a href="#!/password">Click here to recover your password.</a></p>
+						-->
+  				</div>
+				</div>
+	   </section> <!-- #viewLogin -->
+
+			<!-- View: Signup
+			============================================ -->
+  		<section id="viewSignup" class="viewPanel" style="display:none;">
+				<div class="row">
+					<div class="span6">
+
+            <form id="formSignup" class="form-horizontal">
+              <fieldset>
+								<legend>SkyAppTwo Signup</legend>
+								<div id="alertSignup" class="alert alert-error" style="display:none;">
+									<a class="close" data-dismiss="alert">&times;</a>
+									Code Monkey on Fired!
+								</div>
+                <!-- <div class="control-group">
+                  <label class="control-label" for="signupName">Name</label>
+                  <div class="controls">
+                    <input type="text" id="signupName" name="signupName">
+                  </div>
+                </div> -->
+                <div class="control-group">
+                  <label class="control-label" for="signupEmail">Email</label>
+                  <div class="controls">
+                    <input type="text" id="signupEmail" name="signupEmail">
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="signupPassword">Password</label>
+                  <div class="controls">
+                    <input type="password" id="signupPassword" name="signupPassword">
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">Signup</button>
+                </div>
+              </fieldset>
+            </form>
+
+  				</div>
+					<div class="span6">
+						<legend>&nbsp;</legend>
+						<h3>Already have an account?</h3>
+						<p><a href="#!/login">Click here to log in.</a></p>
+  				</div>
+				</div>
+	   </section> <!-- #viewSignup -->
+
+      <hr>
+
+      <footer>
+        <p>&copy <a href="http://about.me/edorcutt">Ed Orcutt</a> 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Kynetx Sitetag, load and run -->
+		<script>KOBJ_config= {"a169x620:kynetx_app_version":"dev","rids":["a169x620"]};</script>
+		<script src="http://init.kobj.net/js/shared/kobj-static.js"></script>
+
+  </body>
+</html>
